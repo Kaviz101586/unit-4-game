@@ -1,5 +1,5 @@
 #top {
-    margin-top: 16px;
+    margin-top: 10px;
     color: rgb(254,218,74);
     font-size: 60px
 }
@@ -19,7 +19,7 @@
 
 #textbox {
     color: #a7a094;
-    font-size: 24px;
+    font-size: 20px;
     font-family: 'Star Jedi', serif;
 }
 
@@ -29,6 +29,8 @@
     margin-right: auto;
     margin-top: auto;
     margin-bottom: auto;
+    color: rgb(254,218,74);
+    font-size: 36px
 }
 
 #main-container {

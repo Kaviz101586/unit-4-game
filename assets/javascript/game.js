@@ -1,6 +1,6 @@
 var activeHero;
 var activeEnemy;
-var selectedHero=true;
+var selectedHero=false;
 var hp;
 var ap;
 var cp;
