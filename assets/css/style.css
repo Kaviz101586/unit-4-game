@@ -1,7 +1,8 @@
 #top {
-    margin-top: 10px;
+    /* margin-top: 4px; */
     color: rgb(254,218,74);
-    font-size: 60px
+    font-size: 60px;
+    margin: 0px;
 }
 
 #Luke, #Vader, #OWK, #Maul, #Rey, #Kylo, #Yoda, #Palp {
@@ -13,7 +14,7 @@
 }
 
 .row {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     margin-bottom: 20px;
 }
 
@@ -21,14 +22,15 @@
     color: #a7a094;
     font-size: 20px;
     font-family: 'Star Jedi', serif;
+    margin: 0px;
 }
 
 #textbox1 {
     display: block;
-    margin-left: auto;
+    /* margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    margin-bottom: auto;
+    margin-bottom: auto; */
     color: rgb(254,218,74);
     font-size: 36px
 }

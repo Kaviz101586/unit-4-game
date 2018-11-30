@@ -1,6 +1,7 @@
 var activeHero;
 var activeEnemy;
 var selectedHero=false;
+var selectedEnemy=false;
 var hp;
 var ap;
 var cp;
@@ -74,6 +75,9 @@ var villains = {
         cp: 25
     }
 }
+
+
+
 
 $("#Luke").on("click", function() {
     activeHero=
