@@ -1,7 +1,9 @@
 var activeHero;
 var activeEnemy;
+var defeatedEnemy;
 var selectedHero=false;
 var selectedEnemy=false;
+
 var hp;
 var ap;
 var cp;
@@ -87,8 +89,11 @@ $(document).ready(function() {
             $("#Luke").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Luke").appendTo("#attackerPlaceholder");
             $("#Luke").animate({opacity: '1.0'},"slow");
+            $("#OWK").animate({opacity: "0"})
+            $("#Rey").animate({opacity: "0"})
+            $("#Yoda").animate({opacity: "0"})
             $("#Luke").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
             
         }
@@ -109,8 +114,11 @@ $(document).ready(function() {
             $("#OWK").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#OWK").appendTo("#attackerPlaceholder");
             $("#OWK").animate({opacity: '1.0'},"slow");
+            $("#Luke").animate({opacity: "0"})
+            $("#Rey").animate({opacity: "0"})
+            $("#Yoda").animate({opacity: "0"})
             $("#OWK").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
             
         }
@@ -130,8 +138,11 @@ $(document).ready(function() {
             $("#Rey").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Rey").appendTo("#attackerPlaceholder");
             $("#Rey").animate({opacity: '1.0'},"slow");
+            $("#OWK").animate({opacity: "0"})
+            $("#Luke").animate({opacity: "0"})
+            $("#Yoda").animate({opacity: "0"})
             $("#Rey").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
             
         }
@@ -152,8 +163,11 @@ $(document).ready(function() {
             $("#Yoda").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Yoda").appendTo("#attackerPlaceholder");
             $("#Yoda").animate({opacity: '1.0'},"slow");
+            $("#OWK").animate({opacity: "0"})
+            $("#Rey").animate({opacity: "0"})
+            $("#Luke").animate({opacity: "0"})
             $("#Yoda").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
            
         }
@@ -172,8 +186,11 @@ $(document).ready(function() {
             $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Vader").appendTo("#attackerPlaceholder");
             $("#Vader").animate({opacity: '1.0'},"slow");
+            $("#Maul").animate({opacity: "0"})
+            $("#Kylo").animate({opacity: "0"})
+            $("#Palp").animate({opacity: "0"})
             $("#Vader").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
             
         }
@@ -192,8 +209,11 @@ $(document).ready(function() {
             $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Maul").appendTo("#attackerPlaceholder");
             $("#Maul").animate({opacity: '1.0'},"slow");
+            $("#Vader").animate({opacity: "0"})
+            $("#Kylo").animate({opacity: "0"})
+            $("#Palp").animate({opacity: "0"})
             $("#Maul").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
            
         }
@@ -212,8 +232,11 @@ $(document).ready(function() {
             $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Kylo").appendTo("#attackerPlaceholder");
             $("#Kylo").animate({opacity: '1.0'},"slow");
+            $("#Maul").animate({opacity: "0"})
+            $("#Vader").animate({opacity: "0"})
+            $("#Palp").animate({opacity: "0"})
             $("#Kylo").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
             
         }
@@ -232,8 +255,11 @@ $(document).ready(function() {
             $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Palp").appendTo("#attackerPlaceholder");
             $("#Palp").animate({opacity: '1.0'},"slow");
+            $("#Maul").animate({opacity: "0"})
+            $("#Kylo").animate({opacity: "0"})
+            $("#Vader").animate({opacity: "0"})
             $("#Palp").animate({height: "400px", width: "350px"},"slow");
-            $("#textbox1").empty()
+            $("#textbox1").text("")
             selectedHero = true;
             
         }

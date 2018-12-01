@@ -70,6 +70,10 @@ span.dark {
     /* background: orange; */
 }
 
+#rowPlaceholder {
+    height: 150px
+}
+
 body {
     display: flex;
     flex-direction: row;
