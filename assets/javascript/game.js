@@ -289,31 +289,31 @@ $(document).ready(function() {
         })
 
 
-    //   HELP HERE - trying to animate the pictures of the active units   
-    var attack = function {
+    //   HELP HERE - trying to animate the pictures of the active units and do the actual execution     
+    // var attack = function {
     
-        $("#attack").click(function() {
-            $(activeHero.image).animate({left:"+=300px"}, "fast");
-            $(activeHero.image).animate({left:"-=300px"}, "fast");
-            $(activeEnemy.image).delay( 500 ).animate({left:"-=300px"}, "fast");
-            $(activeEnemy.image).animate({left:"+=300px"}, "fast");
+    //     $("#attack").click(function() {
+    //         $(activeHero.image).animate({left:"+=300px"}, "fast");
+    //         $(activeHero.image).animate({left:"-=300px"}, "fast");
+    //         $(activeEnemy.image).delay( 500 ).animate({left:"-=300px"}, "fast");
+    //         $(activeEnemy.image).animate({left:"+=300px"}, "fast");
 
-            for 
-            activerHero.ap - activeEnemy.hp
+    //         for 
+    //         activerHero.ap - activeEnemy.hp
 
-            = (x*2), activeHero.ap
+    //         = (x*2), activeHero.ap
 
-        })}
-    //   HELP HERE - trying to animate the pictures of the active units   
+    //     })}
+    //   HELP HERE - trying to animate the pictures of the active units and do the actual execution   
 
-    function attack {
-        if (activeEnemy.hp <= 0) {
-            alert("You've defeated your opponent! Pick a new enemy to battle!")
-        }
-        else {
-            attack()
-        }
-    }
+    // function attack {
+    //     if (activeEnemy.hp <= 0) {
+    //         alert("You've defeated your opponent! Pick a new enemy to battle!")
+    //     }
+    //     else {
+    //         attack()
+    //     }
+    // }
 
    
 })
