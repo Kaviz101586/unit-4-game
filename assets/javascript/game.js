@@ -38,10 +38,7 @@ var heroes = {
         hp: 200,
         ap: 25,
         cp: 25
-    }
-}
-
-var villains = {
+    },
     vader: {
         name: "Darth Vader",
         image: "assets/images/empire-strikes-back_1920x1080.jpg",
@@ -76,10 +73,154 @@ var villains = {
     }
 }
 
+$(document).ready(function() {
+    $("#Luke").click(function() {
+        if (!selectedHero) {
+            $("#Luke").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Luke").appendTo("#attackerPlaceholder");
+            $("#Luke").animate({opacity: '1.0'},"slow");
+            $("#Luke").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#Luke").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Luke").appendTo("#defenderPlaceholder");
+            $("#Luke").animate({opacity: '1.0'},"slow");
+            $("#Luke").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+    })
 
 
+    $("#OWK").click(function() {
+        if (!selectedHero) {
+            $("#OWK").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#OWK").appendTo("#attackerPlaceholder");
+            $("#OWK").animate({opacity: '1.0'},"slow");
+            $("#OWK").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#OWK").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#OWK").appendTo("#defenderPlaceholder");
+            $("#OWK").animate({opacity: '1.0'},"slow");
+            $("#OWK").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+    })
 
-$("#Luke").on("click", function() {
-    activeHero=
-    activeHero.animate({ height: "300px", width: "300px" });
-})
+    $("#Rey").click(function() {
+        if (!selectedHero) {
+            $("#Rey").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Rey").appendTo("#attackerPlaceholder");
+            $("#Rey").animate({opacity: '1.0'},"slow");
+            $("#Rey").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#Rey").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Rey").appendTo("#defenderPlaceholder");
+            $("#Rey").animate({opacity: '1.0'},"slow");
+            $("#Rey").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+        })
+
+
+    $("#Yoda").click(function() {
+        if (!selectedHero) {
+            $("#Yoda").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Yoda").appendTo("#attackerPlaceholder");
+            $("#Yoda").animate({opacity: '1.0'},"slow");
+            $("#Yoda").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#Yoda").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Yoda").appendTo("#defenderPlaceholder");
+            $("#Yoda").animate({opacity: '1.0'},"slow");
+            $("#Yoda").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+        })
+    $("#Vader").click(function() {
+        if (!selectedHero) {
+            $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Vader").appendTo("#attackerPlaceholder");
+            $("#Vader").animate({opacity: '1.0'},"slow");
+            $("#Vader").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Vader").appendTo("#defenderPlaceholder");
+            $("#Vader").animate({opacity: '1.0'},"slow");
+            $("#Vader").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+        })
+    $("#Maul").click(function() {
+        if (!selectedHero) {
+            $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Maul").appendTo("#attackerPlaceholder");
+            $("#Maul").animate({opacity: '1.0'},"slow");
+            $("#Maul").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Maul").appendTo("#defenderPlaceholder");
+            $("#Maul").animate({opacity: '1.0'},"slow");
+            $("#Maul").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+        })
+    $("#Kylo").click(function() {
+        if (!selectedHero) {
+            $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Kylo").appendTo("#attackerPlaceholder");
+            $("#Kylo").animate({opacity: '1.0'},"slow");
+            $("#Kylo").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Kylo").appendTo("#defenderPlaceholder");
+            $("#Kylo").animate({opacity: '1.0'},"slow");
+            $("#Kylo").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+        })  
+    $("#Palp").click(function() {
+        if (!selectedHero) {
+            $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Palp").appendTo("#attackerPlaceholder");
+            $("#Palp").animate({opacity: '1.0'},"slow");
+            $("#Palp").animate({height: "400px", width: "350px"},"slow");
+            selectedHero = true;
+        }
+        else if (!selectedEnemy) {
+            $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
+            $("#Palp").appendTo("#defenderPlaceholder");
+            $("#Palp").animate({opacity: '1.0'},"slow");
+            $("#Palp").animate({height: "400px", width: "350px"},"slow");
+            selectedEnemy = true;
+        }
+        else 
+            alert("You must deal with this enemy first!")
+        })
+    })
