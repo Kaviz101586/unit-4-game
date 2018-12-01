@@ -97,7 +97,7 @@ $(document).ready(function() {
             $("#Luke").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.luke = activeHero;
+            activeHero = heroes.luke;
             
         }
         else if (!selectedEnemy) {
@@ -106,7 +106,7 @@ $(document).ready(function() {
             $("#Luke").animate({opacity: '1.0'},"slow");
             $("#Luke").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.luke = activeEnemy;
+            activeEnemy = heroes.luke;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -124,7 +124,7 @@ $(document).ready(function() {
             $("#OWK").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.owk = activeHero;
+            activeHero = heroes.owk;
             
         }
         else if (!selectedEnemy) {
@@ -133,7 +133,7 @@ $(document).ready(function() {
             $("#OWK").animate({opacity: '1.0'},"slow");
             $("#OWK").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.owk = activeEnemy;
+            activeEnemy = heroes.owk;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -150,7 +150,7 @@ $(document).ready(function() {
             $("#Rey").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.rey = activeHero;
+            activeHero = heroes.rey;
             
         }
         else if (!selectedEnemy) {
@@ -159,7 +159,7 @@ $(document).ready(function() {
             $("#Rey").animate({opacity: '1.0'},"slow");
             $("#Rey").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.rey = activeEnemy;
+            activeEnemy = heroes.rey;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -177,7 +177,7 @@ $(document).ready(function() {
             $("#Yoda").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.yoda = activeHero;
+            activeHero = heroes.yoda;
            
         }
         else if (!selectedEnemy) {
@@ -186,7 +186,7 @@ $(document).ready(function() {
             $("#Yoda").animate({opacity: '1.0'},"slow");
             $("#Yoda").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.yoda = activeEnemy;
+            activeEnemy = heroes.yoda;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -202,7 +202,7 @@ $(document).ready(function() {
             $("#Vader").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.vader = activeHero;
+            activeHero = heroes.vader;
         }
         else if (!selectedEnemy) {
             $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -210,7 +210,7 @@ $(document).ready(function() {
             $("#Vader").animate({opacity: '1.0'},"slow");
             $("#Vader").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.vader = activeEnemy;
+            activeEnemy = heroes.vader;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -226,7 +226,7 @@ $(document).ready(function() {
             $("#Maul").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.maul = activeHero;
+            activeHero = heroes.maul;
         }
         else if (!selectedEnemy) {
             $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -234,7 +234,7 @@ $(document).ready(function() {
             $("#Maul").animate({opacity: '1.0'},"slow");
             $("#Maul").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.maul = activeEnemy;
+            activeEnemy = heroes.maul;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -250,7 +250,7 @@ $(document).ready(function() {
             $("#Kylo").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.kylo = activeHero;
+            activeHero = heroes.kylo;
         }
         else if (!selectedEnemy) {
             $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -258,7 +258,7 @@ $(document).ready(function() {
             $("#Kylo").animate({opacity: '1.0'},"slow");
             $("#Kylo").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.kylo = activeEnemy;
+            activeEnemy = heroes.kylo;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -274,7 +274,7 @@ $(document).ready(function() {
             $("#Palp").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            heroes.palp = activeHero;
+            activeHero = heroes.palp;
         }
         else if (!selectedEnemy) {
             $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -282,7 +282,7 @@ $(document).ready(function() {
             $("#Palp").animate({opacity: '1.0'},"slow");
             $("#Palp").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
-            heroes.palp = activeEnemy;
+            activeEnemy = heroes.palp;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -290,21 +290,20 @@ $(document).ready(function() {
 
 
     //   HELP HERE - trying to animate the pictures of the active units and do the actual execution     
-    // var attack = function {
     
-    //     $("#attack").click(function() {
-    //         $(activeHero.image).animate({left:"+=300px"}, "fast");
-    //         $(activeHero.image).animate({left:"-=300px"}, "fast");
-    //         $(activeEnemy.image).delay( 500 ).animate({left:"-=300px"}, "fast");
-    //         $(activeEnemy.image).animate({left:"+=300px"}, "fast");
-
+        $("#attack").click(function() {
+            $(activeHero.heroId).animate({left:"+=300px"}, "fast");
+            $(activeHero.heroId).animate({left:"-=300px"}, "fast");
+            $(activeEnemy.heroId).delay( 500 ).animate({left:"-=300px"}, "fast");
+            $(activeEnemy.heroId).animate({left:"+=300px"}, "fast");
+        })
     //         for 
-    //         activerHero.ap - activeEnemy.hp
+    //         activeHero.ap - activeEnemy.hp
 
     //         = (x*2), activeHero.ap
 
     //     })}
-    //   HELP HERE - trying to animate the pictures of the active units and do the actual execution   
+    // //   HELP HERE - trying to animate the pictures of the active units and do the actual execution   
 
     // function attack {
     //     if (activeEnemy.hp <= 0) {
