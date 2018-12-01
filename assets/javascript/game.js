@@ -11,6 +11,7 @@ var heroes = {
         name: "Luke Skywalker",
         image: "assets/images/Luke_Skywalker_ROTJ.png",
         heroId: "#Luke",
+        faction: "good",
         hp: 200,
         ap: 25,
         cp: 25
@@ -19,6 +20,7 @@ var heroes = {
         name: "Obi Wan Kenobi",
         image: "assets/images/5c1e46f9f3a8427ed791d882798e35e0d09ba438e1f6ca815811eef154412b9a_4076420.jpg",
         heroId: "#OWK",
+        faction: "good",
         hp: 200,
         ap: 25,
         cp: 25
@@ -27,6 +29,7 @@ var heroes = {
         name: "Rey",
         image: "assets/images/star_wars_the_last_jedi_rey_jedi_training_sixth_sc_by_werewolfblooddarui-dbr50sz.png",
         heroId: "#Rey",
+        faction: "good",
         hp: 200,
         ap: 25,
         cp: 25
@@ -35,6 +38,7 @@ var heroes = {
         name: "Yoda",
         image: "assets/images/yoda.jpg",
         heroId: "#Yoda",
+        faction: "good",
         hp: 200,
         ap: 25,
         cp: 25
@@ -43,6 +47,7 @@ var heroes = {
         name: "Darth Vader",
         image: "assets/images/empire-strikes-back_1920x1080.jpg",
         heroId: "#Vader",
+        faction: "evil",
         hp: 200,
         ap: 25,
         cp: 25
@@ -51,6 +56,7 @@ var heroes = {
         name: "Darth Maul",
         image: "assets/images/darth-maul-star-wars-cardboard-stand-up_13577493.jpg",
         heroId: "#Maul",
+        faction: "evil",
         hp: 200,
         ap: 25,
         cp: 25
@@ -59,6 +65,7 @@ var heroes = {
         name: "Kylo Ren",
         image: "assets/images/kylo-ren-foto.jpg",
         heroId: "#Kylo",
+        faction: "evil",
         hp: 200,
         ap: 25,
         cp: 25
@@ -67,6 +74,7 @@ var heroes = {
         name: "Darth Sidious",
         image: "assets/images/Star-Wars-Darth-Sidious-solo-movie.jpg",
         heroId: "#Palp",
+        faction: "evil",
         hp: 200,
         ap: 25,
         cp: 25
@@ -80,7 +88,9 @@ $(document).ready(function() {
             $("#Luke").appendTo("#attackerPlaceholder");
             $("#Luke").animate({opacity: '1.0'},"slow");
             $("#Luke").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+            
         }
         else if (!selectedEnemy) {
             $("#Luke").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -100,7 +110,9 @@ $(document).ready(function() {
             $("#OWK").appendTo("#attackerPlaceholder");
             $("#OWK").animate({opacity: '1.0'},"slow");
             $("#OWK").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+            
         }
         else if (!selectedEnemy) {
             $("#OWK").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -119,7 +131,9 @@ $(document).ready(function() {
             $("#Rey").appendTo("#attackerPlaceholder");
             $("#Rey").animate({opacity: '1.0'},"slow");
             $("#Rey").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+            
         }
         else if (!selectedEnemy) {
             $("#Rey").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -139,7 +153,9 @@ $(document).ready(function() {
             $("#Yoda").appendTo("#attackerPlaceholder");
             $("#Yoda").animate({opacity: '1.0'},"slow");
             $("#Yoda").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+           
         }
         else if (!selectedEnemy) {
             $("#Yoda").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -157,7 +173,9 @@ $(document).ready(function() {
             $("#Vader").appendTo("#attackerPlaceholder");
             $("#Vader").animate({opacity: '1.0'},"slow");
             $("#Vader").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+            
         }
         else if (!selectedEnemy) {
             $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -175,7 +193,9 @@ $(document).ready(function() {
             $("#Maul").appendTo("#attackerPlaceholder");
             $("#Maul").animate({opacity: '1.0'},"slow");
             $("#Maul").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+           
         }
         else if (!selectedEnemy) {
             $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -193,7 +213,9 @@ $(document).ready(function() {
             $("#Kylo").appendTo("#attackerPlaceholder");
             $("#Kylo").animate({opacity: '1.0'},"slow");
             $("#Kylo").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+            
         }
         else if (!selectedEnemy) {
             $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -211,7 +233,9 @@ $(document).ready(function() {
             $("#Palp").appendTo("#attackerPlaceholder");
             $("#Palp").animate({opacity: '1.0'},"slow");
             $("#Palp").animate({height: "400px", width: "350px"},"slow");
+            $("#textbox1").empty()
             selectedHero = true;
+            
         }
         else if (!selectedEnemy) {
             $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
