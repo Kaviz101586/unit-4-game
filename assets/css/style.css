@@ -40,12 +40,12 @@
     margin: 0px;
 }
 
-span.light {
-    font: blue
+#light {
+    color: lightskyblue
 }
 
-span.dark {
-    font: red
+#dark {
+    color: red
 }
 
 #attackerPlaceholder {

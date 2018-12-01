@@ -8,6 +8,8 @@ var hp;
 var ap;
 var cp;
 
+var heroArr = ["#luke","#owk","#rey","#yoda","#vader","#maul","#kylo","#palp"]
+
 var heroes = {
     luke: {
         name: "Luke Skywalker",
@@ -23,45 +25,45 @@ var heroes = {
         image: "assets/images/5c1e46f9f3a8427ed791d882798e35e0d09ba438e1f6ca815811eef154412b9a_4076420.jpg",
         heroId: "#OWK",
         faction: "good",
-        hp: 200,
-        ap: 25,
-        cp: 25
+        hp: 400,
+        ap: 10,
+        cp: 20
     },
     rey: {
         name: "Rey",
         image: "assets/images/star_wars_the_last_jedi_rey_jedi_training_sixth_sc_by_werewolfblooddarui-dbr50sz.png",
         heroId: "#Rey",
         faction: "good",
-        hp: 200,
-        ap: 25,
-        cp: 25
+        hp: 100,
+        ap: 30,
+        cp: 15
     },
     yoda: {
         name: "Yoda",
         image: "assets/images/yoda.jpg",
         heroId: "#Yoda",
         faction: "good",
-        hp: 200,
-        ap: 25,
-        cp: 25
+        hp: 150,
+        ap: 50,
+        cp: 50
     },
     vader: {
         name: "Darth Vader",
         image: "assets/images/empire-strikes-back_1920x1080.jpg",
         heroId: "#Vader",
         faction: "evil",
-        hp: 200,
-        ap: 25,
-        cp: 25
+        hp: 400,
+        ap: 10,
+        cp: 20
     },
     maul: {
         name: "Darth Maul",
         image: "assets/images/darth-maul-star-wars-cardboard-stand-up_13577493.jpg",
         heroId: "#Maul",
         faction: "evil",
-        hp: 200,
-        ap: 25,
-        cp: 25
+        hp: 100,
+        ap: 30,
+        cp: 15
     },
     kylo: {
         name: "Kylo Ren",
@@ -77,9 +79,9 @@ var heroes = {
         image: "assets/images/Star-Wars-Darth-Sidious-solo-movie.jpg",
         heroId: "#Palp",
         faction: "evil",
-        hp: 200,
-        ap: 25,
-        cp: 25
+        hp: 150,
+        ap: 50,
+        cp: 50
     }
 }
 
@@ -95,6 +97,7 @@ $(document).ready(function() {
             $("#Luke").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
+            heroes.luke = activeHero;
             
         }
         else if (!selectedEnemy) {
@@ -103,6 +106,7 @@ $(document).ready(function() {
             $("#Luke").animate({opacity: '1.0'},"slow");
             $("#Luke").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.luke = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -120,6 +124,7 @@ $(document).ready(function() {
             $("#OWK").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
+            heroes.owk = activeHero;
             
         }
         else if (!selectedEnemy) {
@@ -128,6 +133,7 @@ $(document).ready(function() {
             $("#OWK").animate({opacity: '1.0'},"slow");
             $("#OWK").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.owk = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -144,6 +150,7 @@ $(document).ready(function() {
             $("#Rey").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
+            heroes.rey = activeHero;
             
         }
         else if (!selectedEnemy) {
@@ -152,6 +159,7 @@ $(document).ready(function() {
             $("#Rey").animate({opacity: '1.0'},"slow");
             $("#Rey").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.rey = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -169,6 +177,7 @@ $(document).ready(function() {
             $("#Yoda").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
+            heroes.yoda = activeHero;
            
         }
         else if (!selectedEnemy) {
@@ -177,6 +186,7 @@ $(document).ready(function() {
             $("#Yoda").animate({opacity: '1.0'},"slow");
             $("#Yoda").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.yoda = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -192,7 +202,7 @@ $(document).ready(function() {
             $("#Vader").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            
+            heroes.vader = activeHero;
         }
         else if (!selectedEnemy) {
             $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -200,6 +210,7 @@ $(document).ready(function() {
             $("#Vader").animate({opacity: '1.0'},"slow");
             $("#Vader").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.vader = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -215,7 +226,7 @@ $(document).ready(function() {
             $("#Maul").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-           
+            heroes.maul = activeHero;
         }
         else if (!selectedEnemy) {
             $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -223,6 +234,7 @@ $(document).ready(function() {
             $("#Maul").animate({opacity: '1.0'},"slow");
             $("#Maul").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.maul = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -238,7 +250,7 @@ $(document).ready(function() {
             $("#Kylo").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            
+            heroes.kylo = activeHero;
         }
         else if (!selectedEnemy) {
             $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -246,6 +258,7 @@ $(document).ready(function() {
             $("#Kylo").animate({opacity: '1.0'},"slow");
             $("#Kylo").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.kylo = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
@@ -261,7 +274,7 @@ $(document).ready(function() {
             $("#Palp").animate({height: "400px", width: "350px"},"slow");
             $("#textbox1").text("")
             selectedHero = true;
-            
+            heroes.palp = activeHero;
         }
         else if (!selectedEnemy) {
             $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
@@ -269,8 +282,38 @@ $(document).ready(function() {
             $("#Palp").animate({opacity: '1.0'},"slow");
             $("#Palp").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
+            heroes.palp = activeEnemy;
         }
         else 
             alert("You must deal with this enemy first!")
         })
-    })
+
+
+    //   HELP HERE - trying to animate the pictures of the active units   
+    var attack = function {
+    
+        $("#attack").click(function() {
+            $(activeHero.image).animate({left:"+=300px"}, "fast");
+            $(activeHero.image).animate({left:"-=300px"}, "fast");
+            $(activeEnemy.image).delay( 500 ).animate({left:"-=300px"}, "fast");
+            $(activeEnemy.image).animate({left:"+=300px"}, "fast");
+
+            for 
+            activerHero.ap - activeEnemy.hp
+
+            = (x*2), activeHero.ap
+
+        })}
+    //   HELP HERE - trying to animate the pictures of the active units   
+
+    function attack {
+        if (activeEnemy.hp <= 0) {
+            alert("You've defeated your opponent! Pick a new enemy to battle!")
+        }
+        else {
+            attack()
+        }
+    }
+
+   
+})
