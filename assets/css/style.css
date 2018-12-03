@@ -26,6 +26,33 @@
     margin: 0px;
 }
 
+p {
+    font-family: 'Star Jedi', serif;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin: 0px;
+    text-align: center;
+}
+
+#goodhp {
+    color: green
+}
+
+#evilhp {
+    color: red
+}
+
+#hp {
+    color: #a7a094;
+    font-family: 'Star Jedi', serif;
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed
+}
+
 #textbox1 {
     display: block;
     /* margin-left: auto;
@@ -34,6 +61,16 @@
     margin-bottom: auto; */
     color: rgb(254,218,74);
     font-size: 36px
+}
+
+#yourhp {
+    color: rgb(254,218,74);
+    float: left
+}
+
+#enemyhp {
+    color: rgb(254,218,74);
+    float: right
 }
 
 #main-container {
@@ -71,7 +108,7 @@
 }
 
 #rowPlaceholder {
-    height: 150px
+    height: 180px
 }
 
 body {
