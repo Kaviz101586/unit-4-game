@@ -51,7 +51,7 @@ var heroes = {
         cp: 50
     },
     vader: {
-        name: "Darth Vader",
+        name: "Darth vader",
         image: "assets/images/empire-strikes-back_1920x1080.jpg",
         heroId: "#Vader",
         faction: "evil",
@@ -359,9 +359,15 @@ $(document).ready(function() {
             }
 
             if (activeEnemy.hp <= 0) {
-                activeEnemy.image.empty()
+                activeEnemy.empty();
                 selectedEnemy = false;
                 $("#textbox1").text("You've defeated your opponent! Choose another enemy")
+            }
+
+            else if (activeHero.hp <= 0) {
+                activeHero.empty();
+                selectedHero = false;
+                $("#textbox1").text("You lose! Try again!")
             }
 
             else {
@@ -375,6 +381,7 @@ $(document).ready(function() {
                 $(activeHero.heroId).animate({left:"-=300px"}, "fast");
                 audio.play();
                 activeEnemy.hp = activeEnemy.hp - activeHero.ap; 
+                activeEnemy.hp = Math.max(0,activeEnemy.hp);
                 $("#enemyHp").text("Health Points: " + activeEnemy.hp);
                 firstAttack=true;
             }
@@ -385,17 +392,18 @@ $(document).ready(function() {
                 audio.play();
                 activeHero.ap = activeHero.ap*2
                 activeEnemy.hp = activeEnemy.hp - activeHero.ap;
+                activeEnemy.hp = Math.max(0,activeEnemy.hp);
                 $("#enemyHp").text("Health Points: " + activeEnemy.hp);
             }}
   
             function counter() {
                 $(activeEnemy.heroId).delay( 300 ).animate({left:"-=300px"}, "fast");
                 $(activeEnemy.heroId).animate({left:"+=300px"}, "fast");
-                $("#textbox1").text("You've attacked " + activeEnemy.name + ", dealing " + activeHero.ap + " in damage!");
+                $("#textbox1").text("You've attacked " + activeEnemy.name + ", dealing " + activeHero.ap + " in damage! But " + activeEnemy.name + " has countered, dealing " + activeEnemy.cp + " in damage!");
                 audio.play();
                 activeHero.hp = activeHero.hp - activeEnemy.cp;
-                $("#yourHp".text("Health Points: " + activeHero.hp));
-                $("#textbox1").text("But they've countered, dealing " + activeEnemy.cp + " in damage!");
+                activeHero.hp = Math.max(0,activeHero.hp);
+                $("#yourHp").text("Health Points: " + activeHero.hp);
                 }}
         )
     })
