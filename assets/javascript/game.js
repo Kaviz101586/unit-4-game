@@ -87,12 +87,13 @@ var heroes = {
 }
 
 $(document).ready(function() {
-    $("#yourhp").hide();
-    $("#enemyhp").hide();
+    $("#yourHp").hide();
+    $("#enemyHp").hide();
     
 
     $("#Luke").click(function() {
         if (!selectedHero) {
+            $(".goodhp").empty();
             $("#Luke").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Luke").appendTo("#attackerPlaceholder");
             $("#Luke").animate({opacity: '1.0'},"slow");
@@ -106,12 +107,18 @@ $(document).ready(function() {
             
         }
         else if (!selectedEnemy) {
+            $("#lukeHp").empty()
             $("#Luke").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Luke").appendTo("#defenderPlaceholder");
             $("#Luke").animate({opacity: '1.0'},"slow");
             $("#Luke").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.luke;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
@@ -120,7 +127,7 @@ $(document).ready(function() {
 
     $("#OWK").click(function() {
         if (!selectedHero) {
-            $("#goodhp").empty()
+            $(".goodhp").empty();
             $("#OWK").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#OWK").appendTo("#attackerPlaceholder");
             $("#OWK").animate({opacity: '1.0'},"slow");
@@ -134,12 +141,18 @@ $(document).ready(function() {
             
         }
         else if (!selectedEnemy) {
+            $("#owkHp").empty()
             $("#OWK").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#OWK").appendTo("#defenderPlaceholder");
             $("#OWK").animate({opacity: '1.0'},"slow");
             $("#OWK").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.owk;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
@@ -147,7 +160,7 @@ $(document).ready(function() {
 
     $("#Rey").click(function() {
         if (!selectedHero) {
-            $("#goodhp").animate({opacity: "0"});
+            $(".goodhp").empty();
             $("#Rey").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Rey").appendTo("#attackerPlaceholder");
             $("#Rey").animate({opacity: '1.0'},"slow");
@@ -161,12 +174,18 @@ $(document).ready(function() {
             
         }
         else if (!selectedEnemy) {
+            $("#reyHp").empty()
             $("#Rey").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Rey").appendTo("#defenderPlaceholder");
             $("#Rey").animate({opacity: '1.0'},"slow");
             $("#Rey").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.rey;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
@@ -175,7 +194,7 @@ $(document).ready(function() {
 
     $("#Yoda").click(function() {
         if (!selectedHero) {
-            $("#goodhp").animate({opacity: "0"});
+            $(".goodhp").empty();
             $("#Yoda").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Yoda").appendTo("#attackerPlaceholder");
             $("#Yoda").animate({opacity: '1.0'},"slow");
@@ -189,19 +208,25 @@ $(document).ready(function() {
            
         }
         else if (!selectedEnemy) {
+            $("#yodaHp").empty()
             $("#Yoda").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Yoda").appendTo("#defenderPlaceholder");
             $("#Yoda").animate({opacity: '1.0'},"slow");
             $("#Yoda").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.yoda;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
         })
     $("#Vader").click(function() {
         if (!selectedHero) {
-            $("#goodhp").animate({opacity: "0"});
+            $(".evilhp").empty();
             $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Vader").appendTo("#attackerPlaceholder");
             $("#Vader").animate({opacity: '1.0'},"slow");
@@ -214,19 +239,25 @@ $(document).ready(function() {
             activeHero = heroes.vader;
         }
         else if (!selectedEnemy) {
+            $("#vaderHp").empty()
             $("#Vader").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Vader").appendTo("#defenderPlaceholder");
             $("#Vader").animate({opacity: '1.0'},"slow");
             $("#Vader").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.vader;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
         })
     $("#Maul").click(function() {
         if (!selectedHero) {
-            $("#goodhp").animate({opacity: "0"});
+            $(".evilhp").empty();
             $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Maul").appendTo("#attackerPlaceholder");
             $("#Maul").animate({opacity: '1.0'},"slow");
@@ -239,19 +270,25 @@ $(document).ready(function() {
             activeHero = heroes.maul;
         }
         else if (!selectedEnemy) {
+            $("#maulHp").empty()
             $("#Maul").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Maul").appendTo("#defenderPlaceholder");
             $("#Maul").animate({opacity: '1.0'},"slow");
             $("#Maul").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.maul;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
         })
     $("#Kylo").click(function() {
         if (!selectedHero) {
-            $("#goodhp").animate({opacity: "0"});
+            $(".evilhp").empty();
             $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Kylo").appendTo("#attackerPlaceholder");
             $("#Kylo").animate({opacity: '1.0'},"slow");
@@ -264,19 +301,25 @@ $(document).ready(function() {
             activeHero = heroes.kylo;
         }
         else if (!selectedEnemy) {
+            $("#kyloHp").empty()
             $("#Kylo").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Kylo").appendTo("#defenderPlaceholder");
             $("#Kylo").animate({opacity: '1.0'},"slow");
             $("#Kylo").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.kylo;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
         })  
     $("#Palp").click(function() {
         if (!selectedHero) {
-            $("#goodhp").animate({opacity: "0"});
+            $(".evilhp").empty();
             $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Palp").appendTo("#attackerPlaceholder");
             $("#Palp").animate({opacity: '1.0'},"slow");
@@ -289,12 +332,18 @@ $(document).ready(function() {
             activeHero = heroes.palpatine;
         }
         else if (!selectedEnemy) {
+            $("#palpHp").empty()
             $("#Palp").animate({left: '0px', top: '0px', opacity: '0.4'},"slow");
             $("#Palp").appendTo("#defenderPlaceholder");
             $("#Palp").animate({opacity: '1.0'},"slow");
             $("#Palp").animate({height: "400px", width: "350px"},"slow");
             selectedEnemy = true;
             activeEnemy = heroes.palpatine;
+            $("#yourHp").show();
+            $("#enemyHp").show();
+
+            $("#yourHp").text("Health Points: " + activeHero.hp);
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
         }
         else 
             alert("You must deal with this enemy first!")
@@ -302,27 +351,26 @@ $(document).ready(function() {
 
 
         $("#attack").click(function() {
-            $("#yourhp").show();
-            $("#enemyhp").show();
-
-            $("#yourhp").text(activeHero.hp);
-            $("#enemyhp").text(activeEnemy.hp);
-            
+            $("#song").attr("src","assets/images/Star-Wars-Duel-of-the-Fates.mp3")
             $(activeHero.heroId).animate({left:"+=300px"}, "fast");
             $(activeHero.heroId).animate({left:"-=300px"}, "fast");
-            audio.play()
-            activeEnemy.hp = activeEnemy.hp - activeHero.ap
-            $("#textbox1").text("You've attacked your opponent, dealing " + activeHero.ap + " in damage!")
+            audio.play();
+            activeEnemy.hp = activeEnemy.hp - activeHero.ap;
+            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
+
+            if (activeEnemy.hp <= 0) {
+                activeEnemy.image.empty()
+                selectedEnemy = false;
+                $("#textbox1").text("You've defeated your opponent! Choose another enemy")
+            }
             
-                if (activeEnemy.hp = 0) {
-                    $("#textbox1").text("You've defeated your opponent! Choose another enemy")
-                }
-                else {
-                    $(activeEnemy.heroId).delay( 500 ).animate({left:"-=300px"}, "fast");
-                    $(activeEnemy.heroId).animate({left:"+=300px"}, "fast");
-                    audio.play()
-                    activeHero.hp = activeHero.hp - activeEnemy.cp
-                    $("#textbox1").text("But they've countered, dealing " + activeEnemy.cp + " in damage!")
+            else {    
+                $(activeEnemy.heroId).delay( 500 ).animate({left:"-=300px"}, "fast");
+                $(activeEnemy.heroId).animate({left:"+=300px"}, "fast");
+                $("#textbox1").text("You've attacked " + activeEnemy.name + ", dealing " + activeHero.ap + " in damage!")
+                audio.play();
+                activeHero.hp = activeHero.hp - activeEnemy.cp;
+                $("#textbox1").text("But they've countered, dealing " + activeEnemy.cp + " in damage!")
                 }
         })
 

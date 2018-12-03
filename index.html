@@ -7,7 +7,7 @@
   <title>Star Wars RPG</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/javascript/game.js"></script>
-  <iframe width="0" height="0" src="assets/images/star-wars-theme-song.mp3" franeborder="0" allowfullscreen></iframe>
+  <iframe width="0" height="0" src="assets/images/star-wars-theme-song.mp3" id="song" franeborder="0" allowfullscreen></iframe>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -36,17 +36,17 @@
             <div class="col-md-4" id="rowPlaceholder">
                 <img src="assets/images/Luke_Skywalker_ROTJ.png" class="text-center" id="Luke" />
                 <span class="caption">
-                    <p id="goodhp">HP: 200</p>
+                    <p class="goodhp" id="lukeHp">HP: 200</p>
                 </span>
             </div>
             <div class="col-md-4">
-                <span id="yourhp">Your HP</span>
-                <span id="enemyhp">Enemy HP</span>
+                <span id="yourHp">Your HP</span>
+                <span id="enemyHp">Enemy HP</span>
             </div>
             <div class="col-md-4">
                 <img src="assets/images/empire-strikes-back_1920x1080.jpg" class="text-center" id="Vader" />
                 <span class="caption">
-                    <p id="evilhp">HP: 400</p>
+                    <p class="evilhp" id="vaderHp">HP: 400</p>
                 </span>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <div class="col-md-2" id="rowPlaceholder">
                 <img src="assets/images/5c1e46f9f3a8427ed791d882798e35e0d09ba438e1f6ca815811eef154412b9a_4076420.jpg" class="text-center" id="OWK" />
                 <span class="caption">
-                    <p id="goodhp">HP: 400</p>
+                    <p class="goodhp" id="owkHp">HP: 400</p>
                 </span>
             </div>
             <div class="col-md-3"></div>
@@ -63,7 +63,7 @@
             <div class="col-md-2">
                 <img src="assets/images/darth-maul-star-wars-cardboard-stand-up_13577493.jpg" class="text-center" id="Maul" />
                 <span class="caption">
-                    <p id="evilhp">HP: 100</p>
+                    <p class="evilhp" id="maulHp">HP: 100</p>
                 </span>
             </div>
         </div>
@@ -71,7 +71,7 @@
             <div class="col-md-2" id="rowPlaceholder">
                 <img src="assets/images/Star_Wars_The_Last_Jedi_-_Rey_2.png" class="text-center" id="Rey" />
                 <span class="caption">
-                    <p id="goodhp">HP: 100</p>
+                    <p class="goodhp" id="reyHp">HP: 100</p>
                 </span>
             </div>
             <div class="col-md-3"></div>
@@ -82,7 +82,7 @@
             <div class="col-md-2">
                 <img src="assets/images/kylo-ren-foto.jpg" class="text-center" id="Kylo" />
                 <span class="caption">
-                    <p id="evilhp">HP: 200</p>
+                    <p class="evilhp" id="kyloHp">HP: 200</p>
                 </span>
             </div>
         </div>
@@ -90,7 +90,7 @@
             <div class="col-md-4" id="rowPlaceholder">
                 <img src="assets/images/yoda.jpg" class="text-center" id="Yoda" />
                 <span class="caption">
-                    <p id="goodhp">HP: 150</p>
+                    <p class="goodhp" id="yodaHp">HP: 150</p>
                 </span>
             </div>
             <div class="col-md-4 text-center" id="textbox1">
@@ -98,7 +98,7 @@
             <div class="col-md-4">
                 <img src="assets/images/Star-Wars-Darth-Sidious-solo-movie.jpg" class="text-center" id="Palp" />
                 <span class="caption">
-                    <p id="evilhp">HP: 150</p>
+                    <p class="evilhp" id="palpHp">HP: 150</p>
                 </span>
             </div>
         </div>
