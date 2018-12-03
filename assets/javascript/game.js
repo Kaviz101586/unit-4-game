@@ -3,6 +3,8 @@ var activeEnemy;
 var defeatedEnemy;
 var selectedHero=false;
 var selectedEnemy=false;
+var songChange=false;
+var firstAttack=false;
 var audio = new Audio("assets/images/Lightsaber Clash-SoundBible.com-203518049.mp3")
 
 var hp;
@@ -351,50 +353,49 @@ $(document).ready(function() {
 
 
         $("#attack").click(function() {
-            $("#song").attr("src","assets/images/Star-Wars-Duel-of-the-Fates.mp3")
-            $(activeHero.heroId).animate({left:"+=300px"}, "fast");
-            $(activeHero.heroId).animate({left:"-=300px"}, "fast");
-            audio.play();
-            activeEnemy.hp = activeEnemy.hp - activeHero.ap;
-            $("#enemyHp").text("Health Points: " + activeEnemy.hp);
+            if(!songChange) {
+                $("#song").attr("src","assets/images/Star-Wars-Duel-of-the-Fates.mp3");
+                songChange=true;
+            }
 
             if (activeEnemy.hp <= 0) {
                 activeEnemy.image.empty()
                 selectedEnemy = false;
                 $("#textbox1").text("You've defeated your opponent! Choose another enemy")
             }
-            
-            else {    
-                $(activeEnemy.heroId).delay( 500 ).animate({left:"-=300px"}, "fast");
+
+            else {
+                attack ()
+                counter()
+            }
+
+            function attack() {
+            if(!firstAttack) {
+                $(activeHero.heroId).animate({left:"+=300px"}, "fast");
+                $(activeHero.heroId).animate({left:"-=300px"}, "fast");
+                audio.play();
+                activeEnemy.hp = activeEnemy.hp - activeHero.ap; 
+                $("#enemyHp").text("Health Points: " + activeEnemy.hp);
+                firstAttack=true;
+            }
+
+            else if (firstAttack) {
+                $(activeHero.heroId).animate({left:"+=300px"}, "fast");
+                $(activeHero.heroId).animate({left:"-=300px"}, "fast");
+                audio.play();
+                activeHero.ap = activeHero.ap*2
+                activeEnemy.hp = activeEnemy.hp - activeHero.ap;
+                $("#enemyHp").text("Health Points: " + activeEnemy.hp);
+            }}
+  
+            function counter() {
+                $(activeEnemy.heroId).delay( 300 ).animate({left:"-=300px"}, "fast");
                 $(activeEnemy.heroId).animate({left:"+=300px"}, "fast");
-                $("#textbox1").text("You've attacked " + activeEnemy.name + ", dealing " + activeHero.ap + " in damage!")
+                $("#textbox1").text("You've attacked " + activeEnemy.name + ", dealing " + activeHero.ap + " in damage!");
                 audio.play();
                 activeHero.hp = activeHero.hp - activeEnemy.cp;
-                $("#textbox1").text("But they've countered, dealing " + activeEnemy.cp + " in damage!")
-                }
-        })
-
-
-    //         for 
-    //         activeHero.ap - activeEnemy.hp
-
-    //         = (x*2), activeHero.ap
-
-    //     })}
-    // //   HELP HERE - trying to animate the pictures of the active units and do the actual execution   
-
-    // function attack {
-    //     if (activeEnemy.hp <= 0) {
-    //         alert("You've defeated your opponent! Pick a new enemy to battle!")
-    //     }
-    //     else {
-    //         attack()
-    //     }
-    // }
-
-    //  "You attacked your opponent, dealing" + ap + " in damage - but they've countered with" +  XX in damage - but they've countered with YY damage!"
-
-    // 
-
-   
-})
+                $("#yourHp".text("Health Points: " + activeHero.hp));
+                $("#textbox1").text("But they've countered, dealing " + activeEnemy.cp + " in damage!");
+                }}
+        )
+    })
