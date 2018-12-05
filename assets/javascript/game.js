@@ -359,14 +359,16 @@ $(document).ready(function() {
             }
 
             if (activeEnemy.hp <= 0) {
-                activeEnemy.empty();
                 selectedEnemy = false;
+                $(activeEnemy.heroId).remove();
+                $("enemyHp").hide();
                 $("#textbox1").text("You've defeated your opponent! Choose another enemy")
             }
 
             else if (activeHero.hp <= 0) {
-                activeHero.empty();
                 selectedHero = false;
+                activeHero.image.empty();
+                $("#yourHp").hide();
                 $("#textbox1").text("You lose! Try again!")
             }
 
@@ -397,13 +399,24 @@ $(document).ready(function() {
             }}
   
             function counter() {
-                $(activeEnemy.heroId).delay( 300 ).animate({left:"-=300px"}, "fast");
+                $(activeEnemy.heroId).delay( 500 ).animate({left:"-=300px"}, "fast");
                 $(activeEnemy.heroId).animate({left:"+=300px"}, "fast");
-                $("#textbox1").text("You've attacked " + activeEnemy.name + ", dealing " + activeHero.ap + " in damage! But " + activeEnemy.name + " has countered, dealing " + activeEnemy.cp + " in damage!");
+                $("#textbox1").text("You've attacked " + activeEnemy.name + ", dealing " + activeHero.ap + " in damage!");
                 audio.play();
                 activeHero.hp = activeHero.hp - activeEnemy.cp;
                 activeHero.hp = Math.max(0,activeHero.hp);
+                setTimeout(function() {
+                    $("#textbox1").text("But " + activeEnemy.name + " has countered, dealing " + activeEnemy.cp + " in damage!") 
+                }, 1000);
                 $("#yourHp").text("Health Points: " + activeHero.hp);
                 }}
         )
     })
+
+
+    ////// things yet to resolve:
+
+    // 1) delay change in text (split #textbox1 for "you've attacked! and but they're countered!")
+    // 2) reload function after win/loss
+    // 3) qualify how you win or lose (win = defeat 4 enemies, loss is when activeHero.hp <= 0)
+    // 4) clear image completely after enemy is defeated - and allow replacement to take its place
